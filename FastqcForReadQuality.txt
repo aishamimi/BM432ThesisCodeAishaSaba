@@ -1,0 +1,31 @@
+# activate environment #
+
+conda activate strep_project
+
+# run fastqc on three evolved strains #
+
+
+fastqc Y3_188_05/Y3_188_05_FDSW220035704-1r_HMYW7DSX2_L2_1.fq.gz Y3_188_05/Y3_188_05_FDSW220035704-1r_HMYW7DSX2_L2_2.fq.gz
+
+fastqc Y3_188_10/Y3_188_10_FDSW220035705-1r_HMYW7DSX2_L4_1.fq.gz Y3_188_10/Y3_188_10_FDSW220035705-1r_HMYW7DSX2_L4_2.fq.gz
+
+fastqc Y3_188_11/Y3_188_11_FDSW220035706-1r_HMYW7DSX2_L2_1.fq.gz Y3_188_11/Y3_188_11_FDSW220035706-1r_HMYW7DSX2_L2_2.fq.gz
+
+
+# export html file to inspect # 
+
+scp asaba@147.188.173.201:2022_project_asaba/project_data/Y3_188_05/Y3_188_05_FDSW220035704-1r_HMYW7DSX2_L2_1_fastqc.html .
+
+scp asaba@147.188.173.201:2022_project_asaba/project_data/Y3_188_05/Y3_188_05_FDSW220035704-1r_HMYW7DSX2_L2_2_fastqc.html .
+
+# repeat for Y3_188_10 #
+
+scp asaba@147.188.173.201:2022_project_asaba/project_data/Y3_188_10/Y3_188_10_FDSW220035704-1r_HMYW7DSX2_L2_1_fastqc.html .
+
+scp asaba@147.188.173.201:2022_project_asaba/project_data/Y3_188_10/Y3_188_10_FDSW220035704-1r_HMYW7DSX2_L2_2_fastqc.html .
+
+# repeat for Y3_188_11 #
+
+scp asaba@147.188.173.201:2022_project_asaba/project_data/Y3_188_11/Y3_188_11_FDSW220035704-1r_HMYW7DSX2_L2_1_fastqc.html .
+
+scp asaba@147.188.173.201:2022_project_asaba/project_data/Y3_188_11/Y3_188_11_FDSW220035704-1r_HMYW7DSX2_L2_2_fastqc.html .

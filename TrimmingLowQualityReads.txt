@@ -1,0 +1,22 @@
+# run trimmomatic on all three evolved strains #
+
+trimmomatic PE -threads 6 Y3_188_05/Y3_188_05_FDSW220035704-1r_HMYW7DSX2_L2_1.fq.gz Y3_188_05/Y3_188_05_FDSW220035704-1r_HMYW7DSX2_L2_2.fq.gz \
+trimmed_reads/Y3_188_05_forward_paired.fq.gz \ 
+trimmed_reads/Y3_188_05_forward_unpaired.fq.gz \
+trimmed_reads/Y3_188_05_reverse_paired.fq.gz \
+trimmed_reads/Y3_188_05_reverse_unpaired.fq.gz \
+ILLUMINACLIP:TrueSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+
+trimmomatic PE -threads 6 Y3_188_10/Y3_188_10_FDSW220035705-1r_HMYW7DSX2_L4_1.fq.gz Y3_188_11/Y3_188_11_FDSW220035705-1r_HMYW7DSX2_L4_2.fq.gz \ 
+trimmed_reads/Y3_188_11_forward_paired.fq.gz \
+trimmed_reads/Y3_188_11_forward_unpaired.fq.gz \
+trimmed_reads/Y3_188_11_reverse_paired.fq.gz \
+trimmed_reads/Y3_188_11_reverse_unpaired.fq.gz \
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36
+
+trimmomatic PE -threads 6 Y3_188_11/Y3_188_11_FDSW220035706-1r_HMYW7DSX2_L2_1.fq.gz Y3_188_11/Y3_188_11_FDSW220035706-1r_HMYW7DSX2_L2_2.fq.gz \
+trimmed_reads/Y3_188_11_forward_paired.fq.gz \
+trimmed_reads/Y3_188_11_forward.unpaired.fq.gz \
+trimmed_reads/Y3_188_11_reverse_paired.fq.gz \
+trimmed_reads/Y3_188_11_reverse_unpaired.fq.gz \ 
+ILLUMINACLIP:TruSeq3-PE.fa:2:30:10:2:True LEADING:3 TRAILING:3 MINLEN:36

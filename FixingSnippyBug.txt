@@ -1,0 +1,32 @@
+# create mamba environement for snippy #
+
+mamba create --name snippy 
+
+# activate mamba environment #
+
+mamba activate snippy 
+
+# install desired snippy version # 
+
+mamba install snpEff=4 -y 
+
+# check desired version installed correctly, snippy=4.6.0 #
+
+snippy --version 
+
+# variant call in the evolved strains # 
+
+snippy --cpus 16 --outdir variant_calling_Y3_188_05 \
+--ref M1152_NC_003888_genbank_JTM_edit_SNIPPY_progenitor.gb \
+--R1 trimmed_reads/Y3_188_05_forward_paired.fq.gz \
+--R2 trimmed_reads/Y3_188_05_reverse_paired.fq.gz
+
+snippy --cpus 16 --outdir variant_calling_Y3_188_10 \
+--ref M1152_NC_003888_genbank_JTM_edit_SNIPPY_progenitor.gb \
+--R1 trimmed_reads/Y3_188_10_forward_paired.fq.gz \
+--R2 trimmed_reads/Y3_188_10_reverse_paired.fq.gz
+
+snippy --cpus 16 --outdir variant_calling_Y3_188_11 \
+--ref M1152_NC_003888_genbank_JTM_edit_SNIPPY_progenitor.gb \
+--R1 trimmed_reads/Y3_188_11_forward_paired.fq.gz \
+--R2 trimmed_reads/Y3_188_11_reverse_paired.fq.gz
