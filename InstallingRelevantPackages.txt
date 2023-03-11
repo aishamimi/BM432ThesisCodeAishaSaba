@@ -1,0 +1,20 @@
+# activate environment #
+
+conda activate strep_project
+
+# install bioconda channel #
+
+conda config –-add channels defaults
+conda config –-add channels bioconda
+conda config –add channels conda-forge
+conda config –set channel_priority strict
+
+# bioconda channel is then available to the user #
+
+# install fastqc, trimmomatic and snippy using mamba #
+
+mamba install snippy trimmomatic fastqc -y
+
+# to avoid an older version of snippy installing #
+
+mamba install -c bioconda snpEff=4 -y
